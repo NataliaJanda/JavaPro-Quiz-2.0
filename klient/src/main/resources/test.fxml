@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="611.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.testController">
+    <children>
+        <BorderPane layoutX="10.0" layoutY="112.0" prefHeight="411.0" prefWidth="886.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="112.0">
+            <top>
+                <Label fx:id="Question" text="Pytanie" wrapText="true" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+            </top>
+            <bottom>
+                <Pane focusTraversable="true" prefHeight="360.0" prefWidth="475.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <CheckBox fx:id="Answer1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="CheckBox">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="Answer2" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" text="CheckBox">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="Answer3" layoutX="14.0" layoutY="107.0" mnemonicParsing="false" text="CheckBox">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </CheckBox>
+                        <CheckBox fx:id="Answer4" layoutX="14.0" layoutY="155.0" mnemonicParsing="false" text="CheckBox">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </CheckBox>
+                  <ImageView fx:id="questionImageView" fitHeight="191.0" fitWidth="397.0" layoutX="442.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </Pane>
+            </bottom>
+        </BorderPane>
+        <AnchorPane prefHeight="61.0" prefWidth="880.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <children>
+                <Button fx:id="Back" layoutX="15.0" layoutY="11.0" mnemonicParsing="false" onAction="#BackButton" text="&lt;- Wróć do menu" AnchorPane.leftAnchor="15.0">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="Next" layoutX="781.0" layoutY="11.0" mnemonicParsing="false" onAction="#NextButton" text="Dalej -&gt;" AnchorPane.rightAnchor="10.5">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+          <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <items>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="122.0" text="Java Quiz" textAlignment="CENTER" textFill="RED">
+                      <font>
+                          <Font size="24.0" />
+                      </font>
+                  </Label>
+              </items>
+          </ToolBar>
+      <AnchorPane layoutY="41.0" prefHeight="67.0" prefWidth="898.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="41.0">
+         <children>
+              <Label layoutX="370.0" layoutY="17.0" text="Question" AnchorPane.topAnchor="17.0">
+                  <font>
+                      <Font size="28.0" />
+                  </font>
+              </Label>
+              <Label fx:id="LabelQuestionNumber" layoutX="505.0" layoutY="17.0" text="1" AnchorPane.topAnchor="17.0">
+                  <font>
+                      <Font size="28.0" />
+                  </font>
+              </Label>
+              <Label fx:id="Time" layoutX="822.0" layoutY="17.0" text="czas" AnchorPane.rightAnchor="21.5" AnchorPane.topAnchor="17.0">
+                  <font>
+                      <Font size="28.0" />
+                  </font>
+              </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.AdminGuiController">
+    <children>
+        <BorderPane />
+        <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <items>
+            <Button fx:id="Logout" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#LogoutButton" prefHeight="25.0" prefWidth="69.0" text="Wyloguj">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+                <Button fx:id="TestScoreUsers" mnemonicParsing="false" onAction="#TestScoreUsersButton" prefHeight="25.0" prefWidth="106.0" text="Wyniki testów" />
+                <Button fx:id="AddQuestion" mnemonicParsing="false" onAction="#AddQuestionButton" prefWidth="94.0" text="Dodaj pytanie">
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Button>
+            <Button fx:id="Users" mnemonicParsing="false" onAction="#UsersButton" prefWidth="94.0" text="Użytkownicy">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+                <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="122.0" text="Java Quiz" textAlignment="CENTER" textFill="RED">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            <Label text="Admin" />
+            </items>
+        </ToolBar>
+        <Pane focusTraversable="true" layoutX="186.0" layoutY="120.0" prefHeight="360.0" prefWidth="475.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="120.0">
+            <children>
+                <Button fx:id="start" layoutX="174.0" layoutY="126.0" mnemonicParsing="false" onAction="#startQuiz" text="START">
+                    <font>
+                        <Font size="35.0" />
+                    </font></Button>
+                <Label layoutX="149.0" layoutY="60.0" text="Rozpocznij Quizz">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

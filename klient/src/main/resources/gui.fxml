@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.GuiController">
+   <children>
+      <BorderPane />
+      <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+          <Button fx:id="RegisterPanel" mnemonicParsing="false" onAction="#RegisterButtonPanel" prefHeight="25.0" prefWidth="106.0" text="Zarejestruj się" />
+            <Button fx:id="LoginPanel" mnemonicParsing="false" onAction="#LoginButtonPanel" prefWidth="94.0" text="Zaloguj się ">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="122.0" text="Java Quizz" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+        </items>
+      </ToolBar>
+      <AnchorPane layoutX="208.0" layoutY="141.0" prefHeight="367.0" prefWidth="459.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="208.0" AnchorPane.topAnchor="141.0">
+         <children>
+            <Label layoutX="34.0" layoutY="237.0" text="powtórz hasło" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="88.0" layoutY="198.0" text="hasło" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="160.0" text="numer indeksu" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="300.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="126.0" text="nazwisko" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="87.0" text="imię" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <BorderPane prefHeight="328.0" prefWidth="462.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <Label text="Rejstracja" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </top>
+               <bottom>
+                  <Button fx:id="Register" mnemonicParsing="false" onAction="#RegisterSubmit" text="Zarejestruj" BorderPane.alignment="BASELINE_CENTER" />
+               </bottom>
+            </BorderPane>
+            <TextField fx:id="indexField" layoutX="132.0" layoutY="156.0" prefHeight="22.0" prefWidth="233.0" promptText="ineks" AnchorPane.leftAnchor="132.0" AnchorPane.rightAnchor="94.0" />
+            <TextField fx:id="lastNameField" layoutX="132.0" layoutY="122.0" prefHeight="22.0" prefWidth="233.0" promptText="nazwisko" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="93.0" />
+            <TextField fx:id="nameField" layoutX="133.0" layoutY="84.0" prefHeight="22.0" prefWidth="233.0" promptText="imię" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="84.0" />
+            <PasswordField fx:id="passwordField" layoutX="133.0" layoutY="194.0" prefHeight="26.0" prefWidth="233.0" promptText="hasło" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="93.0" />
+            <PasswordField fx:id="repeatPasswordField" layoutX="133.0" layoutY="233.0" prefHeight="26.0" prefWidth="233.0" promptText="hasło" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="93.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

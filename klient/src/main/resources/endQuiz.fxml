@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="611.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane prefHeight="61.0" prefWidth="880.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <children>
+                <Button fx:id="Back" layoutX="15.0" layoutY="11.0" mnemonicParsing="false" onAction="#BackButton" text="&lt;- Wróć do menu" AnchorPane.leftAnchor="15.0">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <items>
+                <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="122.0" text="Java Quiz" textAlignment="CENTER" textFill="RED">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </items>
+        </ToolBar>
+      <BorderPane layoutY="39.0" prefHeight="312.0" prefWidth="899.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0">
+         <top>
+                <Label contentDisplay="CENTER" prefHeight="38.0" prefWidth="90.0" text="Koniec" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Label>
+         </top>
+         <center>
+            <Label fx:id="MaxScore" text="0" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <graphic>
+                  <Label text="/">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <graphic>
+                        <Label fx:id="YourScore" text="0">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                           <graphic>
+                              <Label text="Twój wynik: ">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                     </graphic>
+                  </Label>
+               </graphic>
+            </Label>
+         </center>
+         <bottom>
+            <Label fx:id="Grade" text="5" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <graphic>
+                  <Label text="Ocena:">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Label>
+         </bottom>
+      </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="594.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.startQuizController">
+    <children>
+        <BorderPane />
+        <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <items>
+                <Button fx:id="Logout" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#LogoutButton" prefHeight="25.0" prefWidth="69.0" text="Wyloguj">
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Button>
+                <Button fx:id="aboutQuiz" mnemonicParsing="false" onAction="#aboutQuizButton" prefHeight="25.0" prefWidth="106.0" text="O Quizie" />
+                <Button fx:id="YourScore" mnemonicParsing="false" onAction="#YourScoreButton" prefWidth="94.0" text="Twoje wyniki">
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Button>
+                <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="122.0" text="Java Quiz" textAlignment="CENTER" textFill="RED">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </items>
+        </ToolBar>
+          <Label layoutX="349.0" layoutY="150.0" text="Rozpocznij Quizz" AnchorPane.bottomAnchor="410.0" AnchorPane.leftAnchor="349.0" AnchorPane.rightAnchor="349.0" AnchorPane.topAnchor="150.0">
+              <font>
+                  <Font size="28.0" />
+              </font>
+          </Label>
+          <Button fx:id="start" layoutX="375.0" layoutY="264.0" mnemonicParsing="false" onAction="#startQuiz" text="START" AnchorPane.bottomAnchor="263.0" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="374.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
