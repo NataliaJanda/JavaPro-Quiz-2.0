@@ -10,9 +10,27 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.TestScoreUsersController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.TestScoreUsersController">
     <children>
-        <BorderPane />
+        <BorderPane layoutY="38.0" prefHeight="512.0" prefWidth="900.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
+         <top>
+                <Label text="Wyniki" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+         </top>
+         <center>
+            <TableView fx:id="testTable" minHeight="413.0" minWidth="900.0" prefHeight="413.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="index" prefWidth="196.0" text="index" />
+                <TableColumn fx:id="score" prefWidth="147.0" text="punkty" />
+                  <TableColumn fx:id="maxScore" prefWidth="154.0" text="max punktów" />
+<!--                  <TableColumn fx:id="averageGrade" prefWidth="154.0" text="średnia" />-->
+                  <TableColumn fx:id="grade" prefWidth="177.0" text="ocena" />
+              </columns>
+            </TableView>
+         </center></BorderPane>
         <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <items>
                 <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="122.0" text="Java Quiz" textAlignment="CENTER" textFill="RED">
@@ -23,24 +41,7 @@
                 <Label text="Admin" />
             </items>
         </ToolBar>
-        <Pane focusTraversable="true" layoutX="24.0" layoutY="52.0" prefHeight="493.0" prefWidth="857.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="52.0">
-            <children>
-                <Label layoutX="389.0" text="Wyniki">
-                    <font>
-                        <Font size="28.0" />
-                    </font>
-                </Label>
-            <TableView fx:id="testTable" layoutX="14.0" layoutY="48.0" prefHeight="437.0" prefWidth="830.0">
-              <columns>
-                <TableColumn fx:id="index" prefWidth="196.0" text="index" />
-                <TableColumn fx:id="score" prefWidth="147.0" text="punkty" />
-                  <TableColumn fx:id="maxScore" prefWidth="154.0" text="max punktów" />
-<!--                  <TableColumn fx:id="averageGrade" prefWidth="154.0" text="średnia" />-->
-                  <TableColumn fx:id="grade" prefWidth="177.0" text="ocena" />
-              </columns>
-            </TableView>
-            </children>
-        </Pane>
+        <Pane focusTraversable="true" layoutX="24.0" layoutY="33.0" prefHeight="512.0" prefWidth="900.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0" />
         <AnchorPane layoutY="538.0" prefHeight="62.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <children>
                 <Button fx:id="Back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="34.0" prefWidth="160.0" text="&lt;-- Wróć do menu" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />

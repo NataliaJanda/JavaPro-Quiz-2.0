@@ -1,6 +1,5 @@
 package com.example.javaquizzapp.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,15 +22,16 @@ public class Question {
     @Lob
     private String imageData;
 
-    public Question(Long id, String question){
+    public Question(Long id, String question,String imageData){
         this.id = id;
         this.question = question;
+        this.imageData = imageData;
     }
     public Question(){}
 
-    @Override
-    public String toString() {
-        return question;
-    }
+//    @Override
+//    public String toString() {
+//        return question;
+//    }
 
 }

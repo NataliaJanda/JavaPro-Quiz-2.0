@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.GuiController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.GuiController">
    <children>
       <BorderPane />
       <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -72,6 +72,7 @@
             <TextField fx:id="nameField" layoutX="133.0" layoutY="84.0" prefHeight="22.0" prefWidth="233.0" promptText="imię" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="84.0" />
             <PasswordField fx:id="passwordField" layoutX="133.0" layoutY="194.0" prefHeight="26.0" prefWidth="233.0" promptText="hasło" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="93.0" />
             <PasswordField fx:id="repeatPasswordField" layoutX="133.0" layoutY="233.0" prefHeight="26.0" prefWidth="233.0" promptText="hasło" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="93.0" />
+            <Label fx:id="warning" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="328.0" prefHeight="17.0" prefWidth="335.0" textFill="RED" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="328.0" />
          </children>
       </AnchorPane>
    </children>

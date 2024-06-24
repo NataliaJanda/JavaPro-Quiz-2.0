@@ -177,32 +177,6 @@ public class testController implements Initializable {
 
     }
 
-//    @FXML
-//    private void displayResult(){
-//        try {
-//            if (timer != null) {
-//                timer.stop();
-//            }
-//
-//            Grade.setText(String.valueOf(calculateGrade(countOfCorrectAnswers,currentQuestionIndex)));
-//            YourScore.setText(String.valueOf(countOfCorrectAnswers));
-//            MaxScore.setText(String.valueOf(currentQuestionIndex+1));
-//
-//            String score = YourScore.getText();
-//            String max = MaxScore.getText();
-//            String grade = Grade.getText();
-//            int shot = shotNumber/2;
-//
-//            Student currentStudent = httpService.getCurrentStudent();
-//            Test test = new Test(null,shot,score,max,grade,currentStudent);
-//            test.setStudent(currentStudent);
-//            httpService.saveTest(test);
-//
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
     @FXML
     private void displayQuestion(Question question) {
         LabelQuestionNumber.setText(String.valueOf(currentQuestionIndex + 1));

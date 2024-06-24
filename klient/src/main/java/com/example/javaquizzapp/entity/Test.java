@@ -9,7 +9,7 @@ public class Test {
 
     private Long id;
     String score;
-    String MaxScore;
+    String maxScore;
     String grade;
     int shot;
     private Student student;
@@ -18,7 +18,7 @@ public class Test {
         this.id = id;
         this.shot = shot;
         this.score = score;
-        this.MaxScore = MaxScore;
+        this.maxScore = MaxScore;
         this.grade = grade;
         this.student = student;
     }

@@ -67,15 +67,15 @@ public class AddQuestionController implements Initializable {
         try {
             String questionText = questionField.getText();
             List<Answer> answers = new ArrayList<>();
-//            answers.add(new Answer(null, answer1Field.getText(), ChoiceBoxAns1.getValue(), null));
-//            answers.add(new Answer(null, answer2Field.getText(), ChoiceBoxAns2.getValue(), null));
-//            answers.add(new Answer(null, answer3Field.getText(), ChoiceBoxAns3.getValue(), null));
-//            answers.add(new Answer(null, answer4Field.getText(), ChoiceBoxAns4.getValue(), null));
-
             Question question = new Question(null, questionText);
+
+            answers.add(new Answer(null, answer1Field.getText(), ChoiceBoxAns1.getValue().equals("prawda"), null));
+            answers.add(new Answer(null, answer2Field.getText(), ChoiceBoxAns2.getValue().equals("prawda"), null));
+            answers.add(new Answer(null, answer3Field.getText(), ChoiceBoxAns3.getValue().equals("prawda"), null));
+            answers.add(new Answer(null, answer4Field.getText(), ChoiceBoxAns4.getValue().equals("prawda"), null));
+
             question.setAnswers(answers);
 
-            // Encode selected image to Base64 if selectedImageFile is not null
             if (selectedImageFile != null) {
                 String base64Image = encodeFileToBase64(selectedImageFile);
                 question.setImageData(base64Image);

@@ -21,7 +21,7 @@ public class JavaQuizzAppApplication extends Application {
 
 
 		stage.setTitle("Quizz");
-		Scene scene = new Scene(root, 800, 600);
+		Scene scene = new Scene(root, 900, 600);
 		stage.setScene(scene);
 		stage.show();
 	}

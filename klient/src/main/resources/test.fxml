@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="611.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.testController">
     <children>
-        <BorderPane layoutX="10.0" layoutY="112.0" prefHeight="411.0" prefWidth="886.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="112.0">
+        <BorderPane layoutX="10.0" layoutY="112.0" prefHeight="411.0" prefWidth="886.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="110.0">
             <top>
                 <Label fx:id="Question" text="Pytanie" wrapText="true" BorderPane.alignment="CENTER">
                     <font>
@@ -21,7 +21,7 @@
                 </Label>
             </top>
             <bottom>
-                <Pane focusTraversable="true" prefHeight="360.0" prefWidth="475.0" BorderPane.alignment="CENTER">
+                <Pane focusTraversable="true" prefHeight="315.0" prefWidth="886.0" BorderPane.alignment="TOP_CENTER">
                     <children>
                         <CheckBox fx:id="Answer1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="CheckBox">
                             <font>
@@ -73,16 +73,6 @@
           </ToolBar>
       <AnchorPane layoutY="41.0" prefHeight="67.0" prefWidth="898.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="41.0">
          <children>
-              <Label layoutX="370.0" layoutY="17.0" text="Question" AnchorPane.topAnchor="17.0">
-                  <font>
-                      <Font size="28.0" />
-                  </font>
-              </Label>
-              <Label fx:id="LabelQuestionNumber" layoutX="505.0" layoutY="17.0" text="1" AnchorPane.topAnchor="17.0">
-                  <font>
-                      <Font size="28.0" />
-                  </font>
-              </Label>
               <Label fx:id="Time" layoutX="822.0" layoutY="17.0" text="czas" AnchorPane.rightAnchor="21.5" AnchorPane.topAnchor="17.0">
                   <font>
                       <Font size="28.0" />
@@ -90,5 +80,21 @@
               </Label>
          </children>
       </AnchorPane>
+      <BorderPane layoutY="40.0" maxHeight="150.0" maxWidth="900.0" minHeight="150.0" minWidth="900.0" prefHeight="150.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <top>
+              <Label fx:id="LabelQuestionNumber" alignment="CENTER" text="1" BorderPane.alignment="CENTER">
+                  <font>
+                      <Font size="28.0" />
+                  </font>
+               <graphic>
+                    <Label contentDisplay="CENTER" text="Question">
+                        <font>
+                            <Font size="28.0" />
+                        </font>
+                    </Label>
+               </graphic>
+              </Label>
+         </top>
+      </BorderPane>
     </children>
 </AnchorPane>

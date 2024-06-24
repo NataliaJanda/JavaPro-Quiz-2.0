@@ -6,6 +6,7 @@ import com.example.javaquizzapp.entity.Student;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import lombok.Setter;
@@ -29,6 +30,8 @@ public class GuiController {
     public TextField indexField;
     @FXML
     public Button Register, RegisterPanel, LoginPanel;
+    @FXML
+    public Label warning;
 
     public testController testController;
 
@@ -45,8 +48,14 @@ public class GuiController {
         Roles roles = Roles.STUDENT;
 
         httpService = new HttpService();
+        if (index.isEmpty() || password.isEmpty() || repeatPassword.isEmpty() || name.isEmpty() || lastName.isEmpty()) {
+            warning.setText("Wszystkie pola muszą być uzupełnione");
+            System.out.println("All fields must be filled!");
+            return;
+        }
 
         if (!password.equals(repeatPassword)) {
+            warning.setText("Hasła nie są takie same");
             System.out.println("Passwords do not match!");
             return;
         }

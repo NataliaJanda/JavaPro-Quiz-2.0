@@ -12,7 +12,28 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.UserTestScoreController">
     <children>
-        <BorderPane />
+        <BorderPane prefHeight="550.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <center>
+            <TableView fx:id="UserScoreTable" prefHeight="480.0" prefWidth="834.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="test_id" prefWidth="75.0" text="Test" />
+                <TableColumn fx:id="YourScore" prefWidth="75.0" text="Twój wynik" />
+                  <TableColumn fx:id="MaxScore" prefWidth="75.0" text="Maks" />
+                  <TableColumn fx:id="Grade" prefWidth="75.0" text="Ocena" />
+              </columns>
+            </TableView>
+         </center>
+         <bottom>
+              <AnchorPane prefHeight="50.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+                  <children>
+                      <Button fx:id="Back" layoutX="26.0" layoutY="12.0" maxHeight="25.0" maxWidth="130.0" minHeight="25.0" minWidth="130.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="25.0" prefWidth="130.0" text="&lt;-- Wróć do menu" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="744.0" AnchorPane.topAnchor="12.0">
+                          <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                          </cursor>
+                      </Button>
+                  </children>
+              </AnchorPane>
+         </bottom></BorderPane>
         <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <items>
                 <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="122.0" text="Java Quiz" textAlignment="CENTER" textFill="RED">
@@ -22,22 +43,5 @@
                 </Label>
             </items>
         </ToolBar>
-        <AnchorPane layoutY="550.0" prefHeight="50.0" prefWidth="900.0">
-            <children>
-                <Button fx:id="Back" layoutX="26.0" layoutY="12.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="25.0" prefWidth="130.0" text="&lt;-- Wróć do menu">
-                    <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                    </cursor>
-                </Button>
-            </children>
-        </AnchorPane>
-      <TableView fx:id="UserScoreTable" layoutX="33.0" layoutY="60.0" prefHeight="480.0" prefWidth="834.0">
-        <columns>
-          <TableColumn fx:id="test_id" prefWidth="75.0" text="Test" />
-          <TableColumn fx:id="YourScore" prefWidth="75.0" text="Twój wynik" />
-            <TableColumn fx:id="MaxScore" prefWidth="75.0" text="Maks" />
-            <TableColumn fx:id="Grade" prefWidth="75.0" text="Ocena" />
-        </columns>
-      </TableView>
     </children>
 </AnchorPane>

@@ -8,11 +8,11 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.LoginController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaquizzapp.FXcontroller.LoginController">
     <children>
-        <BorderPane />
         <ToolBar pickOnBounds="false" prefHeight="40.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <items>
                 <Button fx:id="RegisterF" mnemonicParsing="false" onAction="#RegisterButtonF" prefHeight="25.0" prefWidth="106.0" text="Zarejestruj się" />
@@ -28,34 +28,36 @@
                 </Label>
             </items>
         </ToolBar>
-        <AnchorPane layoutX="208.0" layoutY="141.0" prefHeight="264.0" prefWidth="449.0" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="218.0" AnchorPane.topAnchor="141.0">
-            <children>
-                <Label layoutX="88.0" layoutY="151.0" text="hasło" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="100.0">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Label>
-                <Label layoutX="34.0" layoutY="113.0" text="numer indeksu" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="300.0">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Label>
-                <BorderPane layoutX="-6.0" layoutY="10.0" prefHeight="242.0" prefWidth="471.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="10.0">
-                    <top>
-                        <Label text="Zaloguj się" BorderPane.alignment="CENTER">
-                            <font>
-                                <Font size="28.0" />
-                            </font>
-                        </Label>
-                    </top>
-                    <bottom>
-                        <Button fx:id="Login" mnemonicParsing="false" onAction="#LoginSubmit" text="Zaloguj" BorderPane.alignment="BASELINE_CENTER" />
-                    </bottom>
-                </BorderPane>
-                <TextField fx:id="indexLoginField" layoutX="132.0" layoutY="109.0" prefHeight="22.0" prefWidth="233.0" promptText="ineks" AnchorPane.leftAnchor="132.0" AnchorPane.rightAnchor="94.0" />
-                <PasswordField fx:id="passwordLoginField" layoutX="133.0" layoutY="147.0" prefHeight="26.0" prefWidth="233.0" promptText="hasło" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="93.0" />
-            <Label fx:id="errorMessage" layoutX="104.0" layoutY="249.0" prefHeight="17.0" prefWidth="242.0" textFill="RED" />
-            </children>
-        </AnchorPane>
+          <BorderPane layoutY="112.0" maxHeight="250.0" maxWidth="600.0" minHeight="250.0" minWidth="600.0" prefHeight="250.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <top>
+                  <Label text="Zaloguj się" BorderPane.alignment="CENTER">
+                      <font>
+                          <Font size="28.0" />
+                      </font>
+                  </Label>
+              </top>
+              <bottom>
+                  <Button fx:id="Login" mnemonicParsing="false" onAction="#LoginSubmit" text="Zaloguj" BorderPane.alignment="BASELINE_CENTER" />
+              </bottom>
+         <center>
+            <Pane maxHeight="150.0" maxWidth="400.0" minHeight="150.0" minWidth="400.0" prefHeight="150.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                      <TextField fx:id="indexLoginField" layoutX="144.0" layoutY="32.0" prefHeight="22.0" prefWidth="233.0" promptText="ineks" />
+                      <PasswordField fx:id="passwordLoginField" layoutX="144.0" layoutY="78.0" prefHeight="26.0" prefWidth="233.0" promptText="hasło" />
+                      <Label layoutX="89.0" layoutY="82.0" text="hasło">
+                          <font>
+                              <Font size="15.0" />
+                          </font>
+                      </Label>
+                      <Label layoutX="32.0" layoutY="35.0" text="numer indeksu">
+                          <font>
+                              <Font size="15.0" />
+                          </font>
+                      </Label>
+               </children>
+            </Pane>
+         </center>
+          </BorderPane>
+      <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="362.0" prefHeight="17.0" prefWidth="301.0" textFill="RED" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="299.0" />
     </children>
 </AnchorPane>

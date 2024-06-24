@@ -32,7 +32,7 @@ public class HttpService {
         this.gson = new Gson();
     }
     HttpClient httpClient = HttpClient.newBuilder()
-            .version(HttpClient.Version.HTTP_2)  // Wersja protokołu HTTP (HTTP/1.1 lub HTTP/2)
+            .version(HttpClient.Version.HTTP_2)
             .build();
 
     public void addQuestion(Question question) throws IOException, InterruptedException {
@@ -149,7 +149,9 @@ public class HttpService {
     public void saveTest(Test test) throws IOException {
         String endpoint = "/tests";
         String jsonInputString = gson.toJson(test);
+        System.out.println(jsonInputString);
         String response = sendPostRequest(endpoint, jsonInputString);
+
 //        gson.fromJson(response, Test.class);
     }
     public List<Question> getAllQuestionsWithAnswers() throws IOException {
